@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-container {
+  width: 100%;
+  height: 100%;
+  margin-inline: auto;
+  max-width: 1340px;
+  padding-inline: 5%;
+}
+
+h1 {
+  line-height: 72px;
+  font-weight: 700;
+  font-family: "Fraunces", serif;
+}
+
+h2 {
+  line-height: 48px;
+  font-family: Fraunces;
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 900;
+  color: #333d4b;
+  line-height: 36px;
+  font-family: Fraunces;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  font-family: Fraunces;
+}
+
+p {
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Barlow;
+}
+
+.our-collection {
+  font-family: Fraunces;
+}
+
+@layer components {
+  .cards {
+    @apply flex flex-col md:flex-row  lg:flex-col gap-10 md:gap-0 lg:gap-16 justify-center items-center;
+  }
+  .main-image {
+    @apply bg-[url('../image-hero-coffeepress-mobile.jpg')] md:bg-[url('../image-hero-coffeepress-tablet.jpg')] lg:bg-[url('../image-hero-coffeepress.jpg')] relative flex flex-col justify-center  min-h-[100vh] max-h-[100vh] w-full mx-auto rounded-xl  bg-cover bg-no-repeat bg-center px-4;
+  }
+
+  .main-info {
+    @apply relative z-10 flex flex-col gap-12 justify-center items-center  h-full text-center md:text-start md:items-start md:px-16;
+  }
+  .our-collection {
+    @apply absolute  w-[80vw] text-center md:w-full text-[40px] md:text-[90px] lg:text-[180px] font-extrabold inline-block  mt-10 bg-gradient-to-t bg-clip-text from-white  to-gray-400 left-[50%] -translate-x-[50%] text-transparent -z-10 opacity-50;
+  }
+  .card-image {
+    @apply md:w-[50%] lg:w-full inline-flex justify-center items-center;
+  }
+
+  .green-card {
+    @apply rounded-2xl bg-[#0E8784] px-5 py-10 w-[85%] h-[100vh] mx-auto  flex flex-col md:flex-row md:h-auto text-center md:text-start md:gap-5 items-center lg:flex-col lg:text-center lg:gap-10;
+  }
+}
+
+.menu {
+  background: linear-gradient(white 60%, transparent);
+}
+
+.show-menu {
+  top: 8vh !important;
+}
+
+.summary-title > span {
+  color: #0e8784;
+}
